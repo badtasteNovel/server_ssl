@@ -1,0 +1,5 @@
+# 忽略所有檔案
+*
+
+# 取消忽略 .gitignore 本身
+!.gitignore
