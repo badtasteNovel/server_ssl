@@ -1,4 +1,15 @@
+# active directory 是什麼
+- 簡而言之是企業用管理系統。管理底下這些<br>
+1.電腦<br>
+2.使用者帳號<br>
+3.群組<br>
+4.權限<br>
+5.檔案存取<br>
+6.安全性政策<br>
+7.登入驗證<br>
+[僅僅使用則點此略過到達使用手冊](#客戶端加入域)
 # 如何active directory 架設內網伺服器。(會建立dns和企業ssl憑證)
+**建議active directory 網域最好加一個ad作為前綴**
 1. 增加active directory domain service。
 2. 增加active directory ca。
 3. 第一次建立請建立新的樹系。
@@ -63,8 +74,9 @@ Computer Configuration
 確認 Linked to 欄位有你的域名或 OU
 
 Enforced 可選，確保策略被強制套用。
-# 加入ad 域
+# 將客戶端加入域
 步驟 1：設定 DNS
+
 
 客戶端的 首選 DNS 必須指向你的 AD DNS 伺服器（通常就是域控制器 IP）。
 
@@ -72,12 +84,12 @@ Enforced 可選，確保策略被強制套用。
 打開網路設定 → IPv4 → DNS → 輸入 該伺服器內網ip
 
 步驟 2：加入域
+
 方法 A：透過 GUI（最簡單）
 
 打開 控制台 → 系統 → 關於 → 進階系統設定 → 電腦名稱 → 變更
 
 選擇 域 (Domain)，輸入你的域名，例如：當時建立ad域的名稱
 輸入 使用者(自訂義) 創建域時的密碼。
-**建議active directory 網域最好加一個ad作為前綴**
-# 將客戶端加入ad中
+
 
